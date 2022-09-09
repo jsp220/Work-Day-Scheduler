@@ -13,7 +13,7 @@ textarea {
   padding: 10px;
 }
 
-.jumbotron {
+.custom-jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
@@ -32,7 +32,7 @@ textarea {
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: auto;
   border-top: 1px solid white;
 }
 
