@@ -3,6 +3,7 @@ var currentDayEl = $('#current-day');
 
 // ready function executes after the DOM has been loaded
 $(document).ready(function () {
+    // clear button clears schedule on page as well as localstorage
     $(".clearBtn").on("click", function () {
         $(".time-block").each(function() {
             $(this).children("textarea").val("");
@@ -13,7 +14,7 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         // find the value of the sibling tag containing the class .description and assign to eventDesc
         var eventDesc = $(this).siblings(".description").val(); 
-        // assigns the id of the parent tag to variable hour
+        // assigns the id of the parent tag to variable hour as a string
         var hour = JSON.stringify($(this).parent().attr("id"));
         
         localStorage.setItem(hour, eventDesc); // save hour and eventDesc as key-value pair in localStorage
